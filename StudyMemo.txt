@@ -9,5 +9,9 @@
     package.json : 설치한 라이브러리 버전 기록용 파일
 
 
-
+#NextJS 에서 페이지 하나 만들고 싶다 (Routing)
+    1.폴더 하나 만들고
+    2.안에다가 page.js 만들고
+    3.html 만들면 된다.
  
+ #공통 navbar 같은 것은 layout.js로 따로 빼면 다 적용된다.
