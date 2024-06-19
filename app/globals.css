@@ -20,6 +20,7 @@ body {
   border-radius: 5px;
 } 
 
+/* navbar */
 .navbar {
   background: white;
   padding: 20px;
@@ -27,4 +28,19 @@ body {
 .navbar a {
   margin-right: 10px;
   text-decoration: none;
+} 
+
+/* list img */
+.food-img{
+  width: 100%;
+  height: auto;
+}
+
+/* 장바구니 페이지 */
+.cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
 } 
