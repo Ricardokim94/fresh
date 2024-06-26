@@ -1,11 +1,11 @@
 'use client'
 import { useState } from "react";
 
- //이거 안적으면 server component임. server에서는 onclick 이런거 못사용 해서 적어줘야됨.
+//이거 안적으면 server component임. server에서는 onclick 이런거 못사용 해서 적어줘야됨.
 export default function List() {
     //지금은 DB가 없으므로 data를 일단 임의로 넣어봄
     let Product = ['Tomatoes', 'Pasta', 'Coconut']
-    let [Count, setCount] = useState(0)
+    let [Count, setCount] = useState([0, 0, 0])
 
     return (
         <div>
@@ -17,11 +17,12 @@ export default function List() {
                         <div className="food" key={i}>
                             <img src={`/food${i}.png`} className="food-img" alt={item} />
                             <h4>{item}</h4>
-                            <span> {Count} </span>
-                            {/* 버튼 만들어서 수량 값 변경해 보기 */}
-                            <button onClick={()=>{
-                                setCount(Count + 1)
-                            }}> + </button>
+                            <sapn>{Count[i]}</sapn>
+                            <button onClick={() => {
+                                let copy = [...Count]; //array 복사하는 법
+                                copy[i]++
+                                setCount(copy)
+                            }}>+</button>
                         </div>
                     );
                 })
